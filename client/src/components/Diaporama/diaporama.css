@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "GothamBold","Helvetica","Arial",sans-serif;
+  font-size: 12vh;
+  font-weight: 3;
+  font-size-adjust: 0.58;
+  color: rgb(25, 25, 25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: #F5E6DF;
+  background-image: url("../..//images/lyric-fond.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-shadow: 10px 10px 20px #505050;
+}
+/* #section {
+  background-color: bisque;
+}
+#section1 {
+  background-color: bisque;
+}
+#section2 {
+  background-color: coral;
+}
+#section3 {
+  background-color: chartreuse;
+}
+#section4 {
+  background-color: blueviolet;
+} */
+
+.drawer {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+body {
+  overflow: hidden;
+}
