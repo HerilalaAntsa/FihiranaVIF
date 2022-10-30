@@ -20,7 +20,8 @@ const Footer = () => {
         <Box className={classes.footer} >
             <Typography variant="overline" display="block" gutterBottom>
                 © {(new Date().getFullYear()) + " "}
-                <a href={config.linkVif}>VIF</a> Studios
+                <a href={config.linkVif}>VIF</a> Studios_
+                 
                 <img
                     src={logo}
                     alt="vif_logo"
