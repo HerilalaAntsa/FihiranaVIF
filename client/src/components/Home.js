@@ -7,8 +7,6 @@ import ActiveLyric from './ActiveLyric/ActiveLyric';
 import AddLyric from './AddLyric/AddLyric';
 import Header from './Header/Header';
 import { useNavigate } from 'react-router-dom';
-import fondLogo from '../images/fond-logo.png';
-import EditLyric from './AddLyric/EditLyric';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,11 +31,6 @@ const useStyles = makeStyles((theme) => ({
 const Home = ({ user, logout }) => {
     const navigate = useNavigate();
 
-    const [state, setState] = useState({
-        mobileView: false,
-    });
-    const { mobileView } = state;
-
     const [lyrics, setLyrics] = useState([]);
     const [activeLyric, setActiveLyric] = useState(null);
     const [isAddingLyric, setIsAddingLyric] = useState(false);
@@ -47,7 +40,7 @@ const Home = ({ user, logout }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     // Sidebar collapse
-    const sidebarCollapsed = localStorage.getItem('sidebar-collapsed');
+    // const sidebarCollapsed = localStorage.getItem('sidebar-collapsed');
     const [isExpanded, setIsExpanded] = useState(true);
 
     const classes = useStyles();
@@ -110,7 +103,7 @@ const Home = ({ user, logout }) => {
                 const lyricTemp = null;
                 setLyrics((prev) => {
                     prev.map((lyr) => {
-                        if (prev.id = lyricId) {
+                        if (prev.id === lyricId) {
                             const lyricCopy = {
                                 ...lyr,
                                 title: body.title,
@@ -140,7 +133,7 @@ const Home = ({ user, logout }) => {
         if (user && user.id) {
             setIsLoggedIn(true);
         }
-    }, [user, navigate, isLoggedIn, handleToggler]);
+    }, [user, navigate, isLoggedIn]);
 
     useEffect(() => {
         try {

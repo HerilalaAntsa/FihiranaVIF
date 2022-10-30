@@ -15,12 +15,12 @@ const useObserverEffect = (MAIN_DELAY, isFirst = false, isLast = false) => {
         } else setVariant("hidden");
     }, [inView]);
 
-    const onMouseScroll = debounce((e) => {
-        if (e.deltaY > 0 && variant === "visible")
-            setVariant(isLast ? "visible" : "next");
-        if (e.deltaY < 0 && variant === "visible")
-            setVariant(isFirst ? "visible" : "previous");
-    }, MAIN_DELAY);
+    // const onMouseScroll = debounce((e) => {
+    //     if (e.deltaY > 0 && variant === "visible")
+    //         setVariant(isLast ? "visible" : "next");
+    //     if (e.deltaY < 0 && variant === "visible")
+    //         setVariant(isFirst ? "visible" : "previous");
+    // }, MAIN_DELAY);
 
     const onKeyNext = debounce((e) => {
         setVariant(isLast ? "visible" : "next");
@@ -38,16 +38,16 @@ const useObserverEffect = (MAIN_DELAY, isFirst = false, isLast = false) => {
 
             e = e || window.event;
 
-            if (e.keyCode == '38') {
+            if (e.keyCode === '38') {
                 onKeyPrevious();
             }
-            else if (e.keyCode == '40') {
+            else if (e.keyCode === '40') {
                 onKeyNext();
             }
-            else if (e.keyCode == '37') {
+            else if (e.keyCode === '37') {
                 onKeyPrevious();
             }
-            else if (e.keyCode == '39') {
+            else if (e.keyCode === '39') {
                 onKeyNext();
             }
         }
