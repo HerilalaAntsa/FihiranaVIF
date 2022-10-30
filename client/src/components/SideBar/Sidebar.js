@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Search } from './index';
 import { makeStyles } from '@mui/styles';
 import LyricContent from './LyricContent';

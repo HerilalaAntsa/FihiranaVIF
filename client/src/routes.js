@@ -28,16 +28,16 @@ const RoutesApp = (props) => {
     }
   };
 
-  const register = async (credentials) => {
-    try {
-      const { data } = await axios.post('/auth/register', credentials);
-      await localStorage.setItem('messenger-token', data.token);
-      setUser(data);
-    } catch (error) {
-      console.error(error);
-      setUser({ error: error.response.data.error || 'Server Error' });
-    }
-  };
+  // const register = async (credentials) => {
+  //   try {
+  //     const { data } = await axios.post('/auth/register', credentials);
+  //     await localStorage.setItem('messenger-token', data.token);
+  //     setUser(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //     setUser({ error: error.response.data.error || 'Server Error' });
+  //   }
+  // };
 
   const logout = async (id) => {
     try {

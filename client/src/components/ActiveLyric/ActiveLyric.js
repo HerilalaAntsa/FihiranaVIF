@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { makeStyles } from "@mui/styles";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import Header from './Header';
 import reactStringReplace from 'react-string-replace';
 import logo from '../../images/fond-logo.png'

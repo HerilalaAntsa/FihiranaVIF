@@ -61,7 +61,7 @@ const Header = ({ lyric, activeDiaporama }) => {
       <Box className={classes.content}>
         <Box style={{ display: 'flex' }}>
           {lyric.artists &&
-            lyric.artists.photoUrl != '' ?
+            lyric.artists.photoUrl !== '' ?
             <LyricAvatar
               title={lyric.artists.name}
               photoUrl={lyric.artists.photoUrl}
