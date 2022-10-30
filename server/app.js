@@ -9,7 +9,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const db = require("./db");
 const { User } = require("./db/models");
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "*"
 };
 
 // create store for sessions to persist in database
