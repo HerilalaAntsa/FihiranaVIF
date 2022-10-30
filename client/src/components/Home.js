@@ -85,7 +85,7 @@ const Home = ({ user, logout }) => {
 
     const postLyric = async (body) => {
         try {
-            const { data } = await axios.post('/api/lyrics', body);
+            const { data } = await axios.post('api/lyrics', body);
             if (data) {
                 setLyrics([...lyrics, data.newLyric]);
                 return true;
@@ -98,7 +98,7 @@ const Home = ({ user, logout }) => {
 
     const putLyric = async (body) => {
         try {
-            await axios.put('/api/lyrics', body).then(() => {
+            await axios.put('api/lyrics', body).then(() => {
                 const { lyricId } = body;
                 const lyricTemp = null;
                 setLyrics((prev) => {
@@ -138,7 +138,7 @@ const Home = ({ user, logout }) => {
     useEffect(() => {
         try {
             const fetchLyrics = async () => {
-                const { data } = await axios.get('/api/lyrics');
+                const { data } = await axios.get('api/lyrics');
                 setLyrics(data);
             }
             fetchLyrics();
@@ -149,7 +149,7 @@ const Home = ({ user, logout }) => {
 
     useEffect(() => {
         // Sidebar responsive
-        const setResponsiveness = () => {setIsExpanded(window.innerWidth >= 900); console.log(window.innerWidth)};
+        const setResponsiveness = () => {setIsExpanded(window.innerWidth >= 900)};
 
         window.addEventListener("resize", setResponsiveness);
         return () => window.removeEventListener('resize', setResponsiveness);
