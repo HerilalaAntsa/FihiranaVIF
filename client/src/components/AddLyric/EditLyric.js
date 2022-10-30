@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from "@mui/styles";
-import { Alert, Autocomplete, Box, Button, FormControl, Input, InputLabel, Snackbar, TextField, Typography } from "@mui/material";
+import { Alert, Autocomplete, Box, Button, FormControl, Snackbar, TextField, Typography } from "@mui/material";
 import { ContentState, convertFromHTML, convertToRaw, EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
@@ -60,14 +60,8 @@ const EditLyric = ({
 
 
   const [editorState, setEditorState] = React.useState(null);
-  const [convertedContent, setConvertedContent] = React.useState(null);
 
   const [open, setOpen] = React.useState(false);
-  const textDialog = "Veuillez vérifier les fautes avant de continuer";
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {

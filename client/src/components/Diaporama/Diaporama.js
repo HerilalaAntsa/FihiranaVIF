@@ -100,6 +100,7 @@ const Diaporama = ({
                             <Section key={ind} MAIN_DELAY={MAIN_DELAY} text={value} idSection={ind} />
                         )
                     }
+                    return <></>
                 })
             }
         </div>
