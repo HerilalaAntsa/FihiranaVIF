@@ -4,7 +4,7 @@ import Section from "./Section";
 
 import "./diaporama.css";
 
-const MAIN_DELAY = 500;
+const MAIN_DELAY = 50;
 
 const Diaporama = ({
     user
